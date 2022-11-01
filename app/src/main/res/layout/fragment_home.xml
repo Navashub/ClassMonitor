@@ -1,74 +1,228 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_gravity="center"
+    android:padding="10dp"
+    android:background="@color/orange"
     tools:context=".fragments.HomeFragment">
-    <LinearLayout
-        android:orientation="vertical"
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/ic_baseline"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/round_image_view"
+        android:src="@drawable/profile_pic"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvGreetings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/semi_bold"
+        android:padding="5dp"
+        android:text="Good Morning Navas,"
+        android:textColor="@color/coral"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <TextView
+        android:id="@+id/tvWelcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/semi_bold"
+        android:text="Welcome back"
+        android:textColor="@color/coral"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvGreetings"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:orientation="horizontal"
-            android:layout_height="wrap_content">
-            <TextView
-                android:text="Navas Herbert\nBachelor of Science in Information Tchnology\nYear2 Semester1"
-                android:textStyle="bold"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvWelcome">
 
-        </LinearLayout>
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="100dp" />
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:orientation="vertical"
-            android:layout_gravity="center"
-            android:layout_height="wrap_content">
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView"
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/areo_blue"
+            android:elevation="20dp"
+            android:padding="5dp"
+            android:layout_marginTop="20dp"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
-            <TextView
-                android:text="Attendance Management System"
-                android:layout_gravity="center"
-                android:padding="15dp"
+            <ImageView
+                android:id="@+id/ivAttendance"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
-
-                <Button
-                    android:text="Learn More"
-                    android:textStyle="bold"
-
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"/>
-
-        </LinearLayout>
-        <View
-            android:layout_width="wrap_content"
-            android:layout_height="100dp" />
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:orientation="vertical"
-            android:layout_gravity="center"
-            android:layout_height="match_parent">
+                android:layout_height="150dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/attendance" />
 
             <TextView
-                android:text="Welcome Navas,\nYou can now view your class units!"
-                android:layout_width="wrap_content"
-                android:layout_gravity="center"
-                android:layout_height="50dp"/>
-
-            <Button
+                android:id="@+id/tvAttendance"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:text="Check Units"
-                android:textStyle="bold"/>
+                android:layout_marginTop="150dp"
+                android:fontFamily="@font/medium"
+                android:text="Attendance Management" />
 
-        </LinearLayout>
+            <Button
+                android:id="@+id/btnMyAttendance"
+                style="@style/Widget.MaterialComponents.Button.Icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="180dp"
+                android:layout_marginEnd="15dp"
+                android:backgroundTint="@color/hsl"
+                android:text="View attendance" />
 
-    </LinearLayout>
+        </androidx.cardview.widget.CardView>
 
-</FrameLayout>
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView2"
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="@color/areo_blue"
+            android:elevation="20dp"
+            android:padding="5dp"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/ivMyUnits"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/units" />
+
+            <TextView
+                android:id="@+id/tvUnits"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="150dp"
+                android:fontFamily="@font/medium"
+                android:text="View the units here" />
+
+            <Button
+                android:id="@+id/btnUinits"
+                style="@style/Widget.MaterialComponents.Button.Icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="180dp"
+                android:backgroundTint="@color/hsl"
+                android:text="View Units" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/areo_blue"
+            android:elevation="20dp"
+            android:padding="5dp"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cardView">
+
+            <ImageView
+                android:id="@+id/ivSchedule"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/schedules" />
+
+            <TextView
+                android:id="@+id/tvSchedule"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="150dp"
+                android:fontFamily="@font/medium"
+                android:text="Here is the schedule" />
+
+            <Button
+                android:id="@+id/btnSchedules"
+                style="@style/Widget.MaterialComponents.Button.Icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="180dp"
+                android:layout_marginEnd="15dp"
+                android:backgroundTint="@color/hsl"
+                android:text="View Schedules" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/areo_blue"
+            android:elevation="20dp"
+            android:padding="5dp"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cardView2">
+
+            <ImageView
+                android:id="@+id/ivPerformance"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/perfomance" />
+
+            <TextView
+                android:id="@+id/tvPerformance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="150dp"
+                android:fontFamily="@font/medium"
+                android:text="Your performance" />
+
+            <Button
+                android:id="@+id/btnPerformance"
+                style="@style/Widget.MaterialComponents.Button.Icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="180dp"
+                android:layout_marginEnd="15dp"
+                android:backgroundTint="@color/hsl"
+                android:text="view performance" />
+
+        </androidx.cardview.widget.CardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
