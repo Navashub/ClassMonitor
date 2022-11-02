@@ -9,20 +9,47 @@
         android:id="@+id/FirstFragment"
         android:name="com.example.classmonitor.FirstFragment"
         android:label="@string/first_fragment_label"
-        tools:layout="@layout/fragment_first">
-
+        tools:layout="@layout/fragment_login">
         <action
-            android:id="@+id/action_FirstFragment_to_SecondFragment"
-            app:destination="@id/SecondFragment" />
+            android:id="@+id/action_FirstFragment_to_homeFragment2"
+            app:destination="@id/homeFragment2" />
     </fragment>
     <fragment
-        android:id="@+id/SecondFragment"
-        android:name="com.example.classmonitor.SecondFragment"
-        android:label="@string/second_fragment_label"
-        tools:layout="@layout/fragment_second">
-
+        android:id="@+id/homeFragment2"
+        android:name="com.example.classmonitor.fragments.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
         <action
-            android:id="@+id/action_SecondFragment_to_FirstFragment"
-            app:destination="@id/FirstFragment" />
+            android:id="@+id/action_homeFragment2_to_attendanceFragment2"
+            app:destination="@id/attendanceFragment2" />
+        <action
+            android:id="@+id/action_homeFragment2_to_unitsFragment2"
+            app:destination="@id/unitsFragment2" />
+        <action
+            android:id="@+id/action_homeFragment2_to_performanceFragment2"
+            app:destination="@id/performanceFragment2" />
+        <action
+            android:id="@+id/action_homeFragment2_to_scheduleFragment"
+            app:destination="@id/scheduleFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/attendanceFragment2"
+        android:name="com.example.classmonitor.fragments.AttendanceFragment"
+        android:label="fragment_attendance"
+        tools:layout="@layout/fragment_attendance" />
+    <fragment
+        android:id="@+id/performanceFragment2"
+        android:name="com.example.classmonitor.fragments.PerformanceFragment"
+        android:label="fragment_performance"
+        tools:layout="@layout/fragment_performance" />
+    <fragment
+        android:id="@+id/unitsFragment2"
+        android:name="com.example.classmonitor.fragments.UnitsFragment"
+        android:label="fragment_units"
+        tools:layout="@layout/fragment_units" />
+    <fragment
+        android:id="@+id/scheduleFragment"
+        android:name="com.example.classmonitor.fragments.ScheduleFragment"
+        android:label="fragment_schedule"
+        tools:layout="@layout/fragment_schedule" />
 </navigation>
