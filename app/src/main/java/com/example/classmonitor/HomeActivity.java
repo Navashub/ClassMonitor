@@ -9,6 +9,10 @@ import android.view.MenuItem;
 import android.widget.FrameLayout;
 import android.widget.Toast;
 
+import com.example.classmonitor.fragments.HomeFragment;
+import com.example.classmonitor.fragments.ScheduleFragment;
+import com.example.classmonitor.fragments.UnitsFragment;
+
 public class HomeActivity extends AppCompatActivity {
     FrameLayout frameLayout;
 
@@ -16,9 +20,9 @@ public class HomeActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
-        HomeFragment homeFragment = new HomeFragment();
+       /* HomeFragment homeFragment = new HomeFragment();
         getSupportFragmentManager().beginTransaction()
-                .replace(R.id.framelyt , homeFragment)
+                .replace(R.id.flLayout, homeFragment)
                 .commit();
     }
 
@@ -34,7 +38,7 @@ public class HomeActivity extends AppCompatActivity {
             case R.id.action_units:
                 UnitsFragment unitsFragment = new UnitsFragment();
                 getSupportFragmentManager().beginTransaction()
-                        .replace(R.id.framelyt , unitsFragment)
+                        .replace(R.id.flLayout, unitsFragment)
                         .commit();
                 Toast.makeText(this, "units", Toast.LENGTH_SHORT).show();
                 break;
@@ -42,7 +46,7 @@ public class HomeActivity extends AppCompatActivity {
             case R.id.action_schedule:
                 ScheduleFragment scheduleFragment = new ScheduleFragment();
                 getSupportFragmentManager().beginTransaction()
-                        .replace(R.id.framelyt , scheduleFragment)
+                        .replace(R.id.flLayout, scheduleFragment)
                         .commit();
                 Toast.makeText(this, "schedule", Toast.LENGTH_SHORT).show();
                 break;
@@ -53,6 +57,6 @@ public class HomeActivity extends AppCompatActivity {
                 break;
 
         }
-        return super.onOptionsItemSelected(item);
+        return super.onOptionsItemSelected(item);*/
     }
 }
