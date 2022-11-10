@@ -17,11 +17,15 @@ public class LoginFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
 
-        /*Button button = (Button)
-
-        button.setOnClickListener(Navigation.
-                createNavigateOnClickListener(R.id.action_LoginFragment_to_homeFragment2, null));*/
+        getView().findViewById(R.id.btnLogin).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Navigation.findNavController(view).navigate(R.id.action_LoginFragment_to_homeFragment2);
+            }
+        });
 
         return inflater.inflate(R.layout.fragment_login, container, false);
+
+
     }
 }
