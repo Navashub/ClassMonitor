@@ -15,6 +15,6 @@ Java is the default programming language. It will be great to have other impleme
 
 With Sincere Gratitude,
 
-Lawi Kiprotich & Herbert Kipkemoi
+Lawi Kiprotich & Navas Herbert
 
 Leave a star, share, follow Further advise: fleeklawi@gmail.com - navasmuller01@gmail.com
